@@ -1,0 +1,27 @@
+﻿categoria,nombre,detalle,clave_merge_o_uso
+Tag,aprobar-proforma,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,derivado-humano,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,frio,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,lead-web,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,lead-whatsapp,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,pide-presupuesto,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,pide-visita,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Tag,resena-solicitada,"Tag del sistema, minúsculas exactas",Se aplica/consulta por nombre exacto
+Pipeline,Comercial Termical,Etapas en orden: Nuevo lead → Conversando → Visita agendada → Proforma enviada → Presupuesto formal enviado → Aprobado → Trabajo agendado → Completado → Cerrado,pipeline_id: touzD5bfsczPyxIXVlw6
+Custom field (contact),paquete_interes,Tipo TEXT · folder: Proforma,contact.paquete_interes
+Custom field (contact),fuente_contacto,Tipo SINGLE_OPTIONS · opciones: WhatsApp / Web / Llamada o visita (manual) / Reseña · folder: General,contact.fuente_contacto
+Custom field (opportunity),requiere_visita,Tipo SINGLE_OPTIONS · opciones: sí / no · nivel OPORTUNIDAD,opportunity.requiere_visita
+Custom field (contact),direccion_servicio,Tipo TEXT · folder: Proforma,contact.direccion_servicio
+Custom field (contact),litros_capacidad,Tipo SINGLE_OPTIONS · opciones: 50 / 80 / 100 / 150 · folder: Proforma,contact.litros_capacidad
+Custom field (contact),detalle_trabajo,Tipo LARGE_TEXT · folder: Proforma,contact.detalle_trabajo
+Custom field (contact),valor_estimado,Tipo MONETORY · folder: Proforma,contact.valor_estimado
+Custom field (contact),tipo_aparato,Tipo SINGLE_OPTIONS · opciones: termo eléctrico / calentador gas / caldera / aerotermo · folder: Proforma,contact.tipo_aparato
+Custom field (contact),tipo_servicio,Tipo SINGLE_OPTIONS · opciones: instalación nueva / sustitución / reparación · folder: Proforma,contact.tipo_servicio
+Custom field (contact),estado_proforma,Tipo SINGLE_OPTIONS · opciones: borrador / revisada / enviada · folder: Proforma,contact.estado_proforma
+Custom field (contact),fecha_primer_contacto,Tipo DATE · folder: General,contact.fecha_primer_contacto
+Custom value,datos_fiscales,"Valor actual: Alejandro Rodríguez Medina · NIF 75564623D · Avda. Don Bosco 38, Granada 18007 · Tlf 644 962 421 · termycalgranada@gmail",{{ custom_values.datos_fiscales }}
+Custom value,iban,Valor actual: ES30 2100 0944 6202 0021 8036,{{ custom_values.iban }}
+Custom value,diagnostico,"Valor actual: 45 € + IVA, descontable de la factura final si repara/sustituye en 1 mes",{{ custom_values.diagnostico }}
+Custom value,metodos_pago,"Valor actual: Tarjeta · Bizum (644 96 24 21) · Efectivo · Financiación sin intereses (La Caixa, solo comisión de apertura) · Transfere",{{ custom_values.metodos_pago }}
+Custom value,zona_servicio,Valor actual: Granada capital + 20 km de radio,{{ custom_values.zona_servicio }}
+Custom value,texto_rgpd,Valor actual: Información Sobre Protección de Datos de Carácter Personal en TÉRMYCAL: Los datos personales tratados para gestionar la ,{{ custom_values.texto_rgpd }}
