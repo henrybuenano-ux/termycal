@@ -1,0 +1,28 @@
+﻿tipo,item,precio_sin_iva,notas
+Aparato,Ariston Next Evo X SFT estanco 11L,"318,18 €",Calentador de gas estanco
+Aparato,Ariston Next Evo X SFT estanco 16L,"418,18 €",Calentador de gas estanco
+Aparato,HTW LowNox estanco 12L,"274,91 €",Calentador de gas estanco
+Aparato,Bosch Therm 3600 S estanco 11L,"389,11 €",Calentador de gas estanco
+Aparato,Ariston Akros R X atmosférico 11L,"245,98 €",Calentador de gas atmosférico
+Aparato,Bosch T 4204 atmosférico 10L,"335,02 €",Calentador de gas atmosférico
+Instalación,Instalación básica calentador estanco,160 €,Mano de obra
+Instalación,Instalación básica calentador atmosférico,110 €,Mano de obra
+Instalación,Adaptación gas a normativa RITE,130 €,Cuando la instalación de gas no cumple normativa
+Instalación,Enchufe con canaleta,55 €,Si no hay toma eléctrica junto al aparato
+Extra,1 m evacuación concéntrico 60/100,"21,60 €",Salida de gases
+Extra,1/2 m evacuación concéntrico 60/100,"15,60 €",Salida de gases
+Extra,Codo 90° o 45° concéntrico,"15,60 €",Salida de gases
+Extra,Abrazadera,5 €,
+Extra,Latiguillos,8 €,
+Extra,Grifos de escuadra (par),14 €,
+Extra,Grifo recto,6 €,
+Extra,Goma butano,10 €,
+Extra,Regulador de gas,15 €,
+Extra,Embellecedor,2 €,
+Extra,Toma de análisis de combustión,15 €,
+Paquete orientativo,Calentador estanco 11L instalado,≈ 478 € + IVA,Aparato + instalación básica; extras aparte
+Paquete orientativo,Calentador estanco 16L instalado,≈ 578 € + IVA,Aparato + instalación básica; extras aparte
+Paquete orientativo,Calentador atmosférico 11L instalado,≈ 356 € + IVA,Aparato + instalación básica; extras aparte
+Regla,Todos los precios son SIN IVA,—,Comunicar siempre como '+ IVA'. Proforma: Base + IVA 21% + Total
+Regla,Modelo de precio,—,"Aparato + instalación básica + extras necesarios, todo + IVA"
+Pendiente,Familias que faltan del catálogo,—,"Termos eléctricos (la más vendida) y calderas: el cliente aún no las envía. Aerotermia: siempre bajo presupuesto, nunca se cataloga."
