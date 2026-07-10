@@ -20,7 +20,7 @@
 | Teléfono / WhatsApp negocio | 644 962 421 (confirmado para conectar a WABA) |
 | Email | termycalgranada@gmail.com |
 | IBAN | ES30 2100 0944 6202 0021 8036 |
-| Web actual | termosycalentadoresgranada.com — ⚠️ CORRECCIÓN 10/7: la web WordPress está VIVA y funcionando (el "caído" del traspaso era falso; verificado en navegador, con 106 reseñas Google integradas). Dominio registrado en Piensa Solutions pero con NAMESERVERS en Hostinger (ns1/ns2.dns-parking.com) → el DNS real se edita en Hostinger, NO en Piensa. NO cambiar los nameservers: tumbaría la web viva. También posee termycal.com (con Y, no "termical.com"), termycal.es, termosycalentadoresgranada.es y calderasgranada.es (hosting WP en Piensa) |
+| Web actual | termosycalentadoresgranada.com — la web WordPress está VIVA (el "caído" del traspaso era falso; 106 reseñas Google integradas; alojada en Hostinger, IP 147.93.92.228 — cuenta del webmaster, sin acceso). ✅ DNS MIGRADO 10/7: se clonó la zona real en Piensa Solutions (A/www 147.93.92.228 · MX mx1/mx2.hostinger.es · SPF hostinger · google-site-verification) + los 6 registros del dominio de envío info.* (mailgun/LC), y se cambiaron los nameservers a ns5/ns6.piensasolutions.com. El DNS se gestiona ya en Piensa (Panel de Control → Entradas DNS, nombres FQDN completos). Rollback: ns1/ns2.dns-parking.com (zona Hostinger intacta). También posee termycal.com (con Y, no "termical.com"), termycal.es, termosycalentadoresgranada.es y calderasgranada.es (hosting WP en Piensa) |
 | Zona | Granada capital + 20 km de radio |
 | Canal | 100% B2C |
 | Particularidad | Colaborador de Leroy Merlin (le agendan por software propio web NO integrable) |
