@@ -20,7 +20,7 @@
 | Teléfono / WhatsApp negocio | 644 962 421 (confirmado para conectar a WABA) |
 | Email | termycalgranada@gmail.com |
 | IBAN | ES30 2100 0944 6202 0021 8036 |
-| Web actual | termosycalentadoresgranada.com (WordPress caído; dominio+hosting los tiene él). También posee termical.com |
+| Web actual | termosycalentadoresgranada.com — ⚠️ CORRECCIÓN 10/7: la web WordPress está VIVA y funcionando (el "caído" del traspaso era falso; verificado en navegador, con 106 reseñas Google integradas). Dominio registrado en Piensa Solutions pero con NAMESERVERS en Hostinger (ns1/ns2.dns-parking.com) → el DNS real se edita en Hostinger, NO en Piensa. NO cambiar los nameservers: tumbaría la web viva. También posee termycal.com (con Y, no "termical.com"), termycal.es, termosycalentadoresgranada.es y calderasgranada.es (hosting WP en Piensa) |
 | Zona | Granada capital + 20 km de radio |
 | Canal | 100% B2C |
 | Particularidad | Colaborador de Leroy Merlin (le agendan por software propio web NO integrable) |
