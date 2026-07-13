@@ -40,7 +40,7 @@ Entregables del presupuesto: `presupuesto_termical.html` (HTML interactivo estil
 
 ## 4. DISEÑO TÉCNICO v2.0 — DECISIONES DE ARQUITECTURA (todas cerradas)
 1. **Bot:** Conversation AI (prompt + KB), NO Agent Studio. Arranque **Suggestive** → Auto-Pilot tras 1-2 semanas. Voice notes ON, imágenes ON, wait 10-15s, máx 15 msgs.
-2. **KB del bot = ÚNICA base de datos de precios** (nada en GHL Payments/Product List).
+2. **KB del bot = única fuente de precios para ESTIMADOS conversacionales**. ⚠️ REVISIÓN 13/7 (Henry): se crearon los 22 productos de calentadores en GHL Products para el elemento "lista de productos" de la plantilla D&C — así el flujo A (proforma manual) suma tipo Excel con IVA 21% automático (resuelve el hallazgo de auditoría sobre el cálculo de IVA). Flujo B sigue por merge fields. REGLA DE MANTENIMIENTO: cambio de precio = actualizar KB del bot + Products (2 sitios).
 3. **Proforma dual:**
    - **Flujo B (~80%):** bot captura campos+email+**fotos** → tag `pide-presupuesto` → WF SP-N notifica resumen aprobable → Termical añade tag `aprobar-proforma` (2 taps app) → WF SP04 genera doc D&C y **envía por email automático**.
    - **Flujo A (bajo presupuesto/aerotermia/extras):** genera desde plantilla, edita, envía manual.
