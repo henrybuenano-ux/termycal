@@ -50,7 +50,7 @@ Entregables del presupuesto: `presupuesto_termical.html` (HTML interactivo estil
 6. **Firma digital: SÍ** (cualquier teléfono; le vale como respaldo para arrancar trabajos).
 7. **Bot pide FOTOS** del aparato/ubicación (quedan en la conversación, sin campo).
 8. **Aerotermia: NUNCA se estima** (2.000-3.000€+); el bot solo estima termos eléctricos, calentadores de gas y calderas (posibles extras 100-200€, comunicar como orientativo).
-9. **Reseñas: encuesta-filtro 1-5** antes del link → 1-3 notificación interna (gestionar insatisfecho) · 4-5 link Google. PS02: IA responde reseñas.
+9. **Reseñas: sistema RBD (snapshot importado 14/7, sustituye al AP02+PS01 diseñado)**: al completar el trabajo, el workflow "AP02-RBD · Envío del link de valoración" manda el trigger link → RBD 01-05 (publicados) gestionan: survey 1-5 con pipeline propio "Reseñas de Google", 1-3 → form privado de comentarios + aviso interno, 4-5 → Google, "no puedo entrar" → link directo, reseña recibida → won + aviso. Mantiene el principio encuesta-filtro. Adaptaciones pendientes anotadas en ClickUp (nodo FT1 huérfano en RBD 01, SMS→WhatsApp en RBD 04, link GBP). PS02: IA responde reseñas (la notificación de reseña nueva ya la cubre RBD 05).
 10. **Diagnóstico: 45€+IVA** descontable de la factura si repara/sustituye en 1 mes. Retirada del viejo + desplazamiento INCLUIDOS en paquetes.
 11. **Telefonía FUERA** (número ES sin Twilio/LC Phone). Mitigación coste cero: buzón de voz con locución → WhatsApp (el cliente la graba).
 12. **FASE 2 fuera de alcance:** facturación automática + Verifactu (normativa ES, enero) · suma automática de extras por IA (por ahora mapeados en plantilla, los agrega Termical) · integración agenda Leroy Merlin.
