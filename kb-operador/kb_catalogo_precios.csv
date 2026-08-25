@@ -1,10 +1,99 @@
-﻿tipo,item,precio_sin_iva,notas
+tipo,item,precio_sin_iva,notas
 Aparato,Ariston Next Evo X SFT estanco 11L,"318,18 €",Calentador de gas estanco
 Aparato,Ariston Next Evo X SFT estanco 16L,"418,18 €",Calentador de gas estanco
 Aparato,HTW LowNox estanco 12L,"274,91 €",Calentador de gas estanco
 Aparato,Bosch Therm 3600 S estanco 11L,"389,11 €",Calentador de gas estanco
 Aparato,Ariston Akros R X atmosférico 11L,"245,98 €",Calentador de gas atmosférico
 Aparato,Bosch T 4204 atmosférico 10L,"335,02 €",Calentador de gas atmosférico
+Aparato,ARISTON Lydos Eco 50L,"193,94 €",Termo eléctrico
+Aparato,ARISTON Lydos Eco 80L,"218,11 €",Termo eléctrico
+Aparato,ARISTON Lydos Eco 100L,"233,28 €",Termo eléctrico
+Aparato,ARISTON Pro ECO1 Dry Multis 50L,"233,91 €",Termo eléctrico
+Aparato,ARISTON Pro ECO1 Dry Multis 80L,"257,80 €",Termo eléctrico
+Aparato,ARISTON Pro ECO1 Dry Multis 100L,"278,88 €",Termo eléctrico
+Aparato,ARISTON Pro ECO1 Dry Multis Slim 30L,"229,48 €",Termo eléctrico
+Aparato,ARISTON Pro ECO1 Dry Multis Slim 50L,"235,20 €",Termo eléctrico
+Aparato,ARISTON Velis Pro 50L,"250,86 €",Termo eléctrico
+Aparato,ARISTON Velis Pro 80L,"287,03 €",Termo eléctrico
+Aparato,ARISTON Velis Pro 100L,"316,98 €",Termo eléctrico
+Aparato,ARISTON Velis Tech Dry 50L,"298,76 €",Termo eléctrico
+Aparato,ARISTON Velis Tech Dry 80L,"368,18 €",Termo eléctrico
+Aparato,ARISTON Velis Tech Dry 100L,"385,40 €",Termo eléctrico
+Aparato,ARISTON Andris R 15L,"150,99 €",Termo eléctrico
+Aparato,ARISTON Andris R 30L,"166,67 €",Termo eléctrico
+Aparato,ARISTON Lydos Hybrid 80L,"515,50 €",Termo eléctrico
+Aparato,ARISTON Lydos Hybrid 100L,"560,03 €",Termo eléctrico
+Aparato,TERMAT NTS 30L,"136,52 €",Termo eléctrico
+Aparato,TERMAT NTS 50L,"136,52 €",Termo eléctrico
+Aparato,TERMAT NTS 80L,"153,94 €",Termo eléctrico
+Aparato,TERMAT NTS 100L,"164,91 €",Termo eléctrico
+Aparato,TERMAT NTS 150L,"262,82 €",Termo eléctrico
+Aparato,TERMAT NTS 200L,"287,30 €",Termo eléctrico
+Aparato,TERMAT NTS Horizontal 80L,"156,16 €",Termo eléctrico
+Aparato,TERMAT NTS Horizontal 100L,"170,94 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2000T 30L,"178,02 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2000T 50L,"186,38 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2000T 80L,"190,40 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2000T 100L,"212,18 €",Termo eléctrico
+Aparato,BOSCH Tronic TR1001T 150L,"238,50 €",Termo eléctrico
+Aparato,BOSCH Tronic TR1001T 200L,"329,60 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2102T Vertical / Horizontal 50L,"194,42 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2102T Vertical / Horizontal 80L,"217,71 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2102T Vertical / Horizontal 100L,"232,43 €",Termo eléctrico
+Aparato,BOSCH Tronic TR2102T Vertical / Horizontal 150L,"345,88 €",Termo eléctrico
+Aparato,BOSCH Tronic 6000T Vertical / Horizontal 50L,"190,28 €",Termo eléctrico
+Aparato,BOSCH Tronic 6000T Vertical / Horizontal 80L,"215,50 €",Termo eléctrico
+Aparato,PROVAI TP2 30L,"113,82 €",Termo eléctrico
+Aparato,PROVAI TP2 50L,"126,91 €",Termo eléctrico
+Aparato,PROVAI TP2 80L,"145,23 €",Termo eléctrico
+Aparato,PROVAI TP2 100L,"160,30 €",Termo eléctrico
+Aparato,PROVAI Siros 50L,"156,67 €",Termo eléctrico
+Aparato,PROVAI Siros 80L,"185,50 €",Termo eléctrico
+Aparato,PROVAI Siros 100L,"201,40 €",Termo eléctrico
+Aparato,PROVAI Andros Duo 50L,"207,34 €",Termo eléctrico
+Aparato,PROVAI Andros Duo 80L,"216,50 €",Termo eléctrico
+Aparato,PROVAI Andros Duo 100L,"135,85 €",Termo eléctrico
+Aparato,PROVAI Andros Duo WiFi 50L,"225,55 €",Termo eléctrico
+Aparato,PROVAI Andros Duo WiFi 80L,"257,22 €",Termo eléctrico
+Aparato,PROVAI Andros Duo WiFi 100L,"278,32 €",Termo eléctrico
+Aparato,THERMOR Concept N4 30L,"152,40 €",Termo eléctrico
+Aparato,THERMOR Concept N4 50L,"156,26 €",Termo eléctrico
+Aparato,THERMOR Concept N4 80L,"168,86 €",Termo eléctrico
+Aparato,THERMOR Concept N4 100L,"185,07 €",Termo eléctrico
+Aparato,THERMOR Concept N4 150L,"294,92 €",Termo eléctrico
+Aparato,THERMOR Concept N4 200L,"329,15 €",Termo eléctrico
+Aparato,THERMOR Concept N4 Horizontal 30L,"178,94 €",Termo eléctrico
+Aparato,THERMOR Concept N4 Horizontal 50L,"198,98 €",Termo eléctrico
+Aparato,THERMOR Concept N4 Horizontal 80L,"216,04 €",Termo eléctrico
+Aparato,THERMOR Concept Slim 50L,"174,78 €",Termo eléctrico
+Aparato,THERMOR Ceramics 50L,"191,42 €",Termo eléctrico
+Aparato,THERMOR Ceramics 80L,"209,38 €",Termo eléctrico
+Aparato,THERMOR Ceramics 100L,"230,06 €",Termo eléctrico
+Aparato,THERMOR Ceramics 150L,"378,50 €",Termo eléctrico
+Aparato,THERMOR Ceramics 200L,"424,55 €",Termo eléctrico
+Aparato,THERMOR Ceramics Slim 50L,"255,90 €",Termo eléctrico
+Aparato,THERMOR Ceramics Slim 80L,"286,55 €",Termo eléctrico
+Aparato,THERMOR Onix Connect 50L,"318,04 €",Termo eléctrico
+Aparato,THERMOR Onix Connect 80L,"367,48 €",Termo eléctrico
+Aparato,THERMOR Onix Connect 100L,"406,52 €",Termo eléctrico
+Aparato,HTW Intelligent WiFi 30L,"119,90 €",Termo eléctrico
+Aparato,HTW Essential 30L,"116,24 €",Termo eléctrico
+Aparato,HTW Essential 50L,"134,79 €",Termo eléctrico
+Aparato,HTW Essential 80L,"143,30 €",Termo eléctrico
+Aparato,HTW Essential 100L,"163,50 €",Termo eléctrico
+Aparato,HTW Dry Vertical 50L,"154,59 €",Termo eléctrico
+Aparato,HTW Dry Vertical 80L,"181,94 €",Termo eléctrico
+Aparato,HTW Dry Vertical 100L,"196,60 €",Termo eléctrico
+Aparato (BLOQUEADO),ARISTON Cares S 24kW,1.400 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),ARISTON Clas One WiFi 24kW,1.560 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),ARISTON Clas One WiFi 30kW,1.700 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BAXI Cubic 24kW,1.450 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BAXI Cubic 28kW,1.550 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BAXI Neodens iPlus 24kW,1.700 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BAXI Neodens iPlus 28kW,1.900 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BOSCH GC4200i W 20 / 30 30kW,1.800 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BOSCH C4300i W 24/25 24kW,2.320 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
+Aparato (BLOQUEADO),BOSCH C4300i W 24/25 30kW,2.600 €,"Caldera condensación gas · INCLUYE instalación básica · ⛔ IVA SIN CONFIRMAR: el .ods dice 'IVA incluido', el PDF de extras dice 'sin IVA'. NO CARGAR hasta que el cliente confirme."
 Instalación,Instalación básica calentador estanco,160 €,Mano de obra
 Instalación,Instalación básica calentador atmosférico,110 €,Mano de obra
 Instalación,Adaptación gas a normativa RITE,130 €,Cuando la instalación de gas no cumple normativa
@@ -26,5 +115,11 @@ Paquete orientativo,Calentador estanco 16L instalado,≈ 578 € + IVA,Aparato +
 Paquete orientativo,Calentador atmosférico 11L instalado,≈ 356 € + IVA,Aparato + instalación básica; extras aparte
 Regla,Todos los precios son SIN IVA,—,Comunicar siempre como '+ IVA'. Proforma: Base + IVA 21% + Total
 Regla,Modelo de precio,—,"Aparato + instalación básica + extras necesarios, todo + IVA"
-Pendiente,Familias que faltan del catálogo,—,"Termos eléctricos (la más vendida) y calderas: el cliente aún no las envía. Aerotermia: siempre bajo presupuesto, nunca se cataloga."
 Regla,Productos en el CRM,—,Los 22 items de esta familia existen como Products en la subcuenta para la lista de productos de la proforma manual (flujo A). Cambio de precio = actualizar KB del bot + Products.
+Instalación,Instalación básica termo eléctrico,⛔ PENDIENTE,"El cliente no la ha enviado. Sin este dato el bot NO puede dar el paquete 'termo instalado', que es la pregunta más frecuente. RECLAMAR."
+Extra,Sonda modulante Ariston Sensys,105 €,Caldera · precio sin IVA (del PDF de extras de calderas)
+Extra,Termostato digital,65 €,Caldera · precio sin IVA
+Extra,Cronotermostato digital,75 €,Caldera · precio sin IVA
+Regla,Modelo de precio por familia,—,"Calentadores de gas y termos eléctricos: aparato + instalación + extras (partidas separadas). Calderas: el precio YA INCLUYE instalación básica, solo se suman extras. El bot NO debe sumar instalación en calderas."
+Aviso,Dato sospechoso en termos,—,"Provai Andros Duo 100L figura a 135,85 €, más barato que su propio 50L (207,34 €) y 80L (216,50 €). El modelo WiFi sí sube de forma coherente (225,55 / 257,22 / 278,32). Casi seguro errata: CONFIRMAR con el cliente antes de usarlo."
+Pendiente,Familias que faltan del catálogo,—,"Solo queda pendiente el precio de instalación de termos eléctricos. Aerotermia: siempre bajo presupuesto, nunca se cataloga."
