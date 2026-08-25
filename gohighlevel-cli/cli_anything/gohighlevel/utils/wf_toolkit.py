@@ -100,6 +100,34 @@ def n_notificacion(titulo, cuerpo, usuario_id=None):
         n.update({"userType": "assign", "assignedOwners": ["contact_owner"]})
     return n
 
+def n_nota(html):
+    """Nota en la ficha del contacto (type de nodo: "add_notes").
+    ⚠️ El cuerpo va en `html`, NO en `note` (validado 25-ago-2026, TÉRMYCAL): con `note`
+    el nodo SE GUARDA sin protestar, pero cualquier PUT posterior sobre ese workflow
+    revienta con "Action validation failed for add_notes: Html is required" — y el nodo
+    nunca habría ejecutado. Molde clonado de los workflows RBD, que sí funcionan."""
+    return {"html": html, "type": "add_notes"}
+
+
+def n_notificacion_interna(titulo, cuerpo, usuario_id=None):
+    """Notificación interna con el type de nodo "internal_notification" — la forma que
+    usan los workflows importados que SÍ avisan (validado 25-ago-2026, TÉRMYCAL).
+    ⚠️ Va ANIDADA bajo `notification`; la forma plana (notificationType/subject/userType
+    a pelo) se guarda, se ve bien en el canvas y NO AVISA A NADIE.
+    El mismo type de nodo tiene otras dos variantes vistas en producción, con la misma
+    estructura anidada: {"type":"sms","sms":{...}} y {"type":"email","email":{...}}.
+    Sobre userType siguen valiendo las reglas de n_notificacion(): "assign" avisa al
+    DUEÑO del contacto (si nadie lo asigna, no avisa a nadie) y "user"+selectedUser a
+    uno concreto — en cuentas de un solo operario, preferir "user"."""
+    n = {"type": "send_notification", "body": cuerpo, "title": titulo,
+         "redirectPage": "conversation"}
+    if usuario_id:
+        n.update({"userType": "user", "selectedUser": usuario_id})
+    else:
+        n.update({"userType": "assign", "assignedOwners": ["contact_owner"]})
+    return {"type": "notification", "notification": n}
+
+
 def n_oportunidad(pipeline_id, stage_id, status="open", valor="{{contact.precio_cotizado}}"):
     """Create/Update opportunity. ⚠️ Sin monetary_value algunos tenants lo rechazan o lo
     ejecutan mal — inclúyelo siempre (puede ser un merge field)."""

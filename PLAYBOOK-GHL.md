@@ -199,3 +199,31 @@ Los mensajes free-form NO necesitan plantillas WABA mientras el lead inicie la c
   (texto vs imagen vs plataforma): registra la inconsistencia, decide una política
   ("la ficha manda") y no la re-litigues.
 - El `.env` (PIT + location + token Firebase) NUNCA se commitea.
+
+---
+
+## 9 · Añadidos del proyecto TÉRMYCAL (25-ago-2026)
+
+Dos moldes más que costaron un fallo silencioso cada uno. Ambos ya están en
+`wf_toolkit.py` (`n_nota()` y `n_notificacion_interna()`).
+
+- **`add_notes`: el cuerpo va en `html`, NO en `note`.** Con `note` el nodo se guarda sin
+  protestar y se ve bien en el canvas, pero nunca ejecuta — y además **envenena el
+  workflow**: cualquier PUT posterior sobre él revienta con `Action validation failed for
+  add_notes: Html is required`. Se descubrió porque el PUT de otra reparación falló en ese
+  workflow y en ninguno más.
+- **`internal_notification` va ANIDADO.** La forma buena es
+  `{"type":"notification","notification":{...}}` con las reglas de userType de §4 dentro.
+  La forma plana (`notificationType`/`subject`/`userType:"all"` a pelo) se guarda, se ve
+  bien y **no avisa a nadie**. El mismo type de nodo tiene otras dos variantes con idéntica
+  estructura anidada: `{"type":"sms","sms":{...}}` y `{"type":"email","email":{...}}` —
+  no confundirlas con nodos rotos al auditar.
+
+- **Gotcha de entorno:** `cargar_env()` usa `setdefault`, así que una variable ya presente
+  en el entorno (p. ej. un token viejo inyectado por el contenedor) le gana al `.env`.
+  Si un script falla con "token refresh failed" y el `.env` es correcto, es esto: forzar
+  la carga pisando el entorno.
+
+- **Confirmado en vivo el §2.1:** en esta subcuenta los 15 workflows construidos por API
+  tenían `allowMultiple` en OFF y los 5 importados por UI en ON. El PUT sin ese campo lo
+  apaga, y nadie se entera hasta que un cliente que vuelve es saltado en silencio.
