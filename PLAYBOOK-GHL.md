@@ -248,3 +248,23 @@ lo toco". **Vació 13 workflows de golpe**, incluidos los 3 puentes del bot y SP
   auditar la anatomía completa por otro motivo.
 - **Corolario:** después de CUALQUIER tanda de PUTs, contar los nodos de cada workflow
   tocado. "200 OK" no significa que siga estando lo que había.
+
+### 9.2 · Crear un nodo de WhatsApp en la UI: hazlo AL FINAL de la cadena
+
+La UI crea el nodo `whatsapp_v2` en modo **multipath**, con dos ramas
+`transition` ("Delivered" / "Undelivered"). Esas transiciones son las que sostienen
+todo lo que cuelga por debajo del nodo — así que **al apagar el toggle de ramas, la UI
+se lleva por delante los nodos siguientes** (observado en TÉRMYCAL, 25-ago-2026).
+
+- **Para hacer un molde:** créalo como ÚLTIMO nodo del workflow. Si no hay nada debajo,
+  apagar el toggle no puede destruir nada. Luego se lee por API y se clona donde haga falta.
+- **Por API no pasa:** un nodo con `toggle_branch:false` y `convertToMultipath:false`
+  se crea ya en cadena recta, sin transiciones. Es la forma que hay que escribir.
+- **Al auditar,** un `whatsapp_v2` acompañado de nodos `transition` significa multipath
+  encendido: la cadena continúa por las transiciones, no por el `next` del nodo.
+
+⚠️ **El historial va con retraso.** `/history` puede no incluir las 1-2 versiones más
+recientes, así que un diff contra "el último snapshot" puede estar comparando dos
+ediciones atrás y atribuir cambios a quien no los hizo. Para saber qué pasó de verdad,
+**compara los IDs de los nodos**: un id que sobrevive es el mismo nodo, y un tipo distinto
+con el mismo id es una conversión en su sitio, no un borrado más un alta.
