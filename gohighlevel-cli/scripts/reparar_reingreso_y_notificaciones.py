@@ -136,15 +136,22 @@ def main():
         # Re-GET inmediato: cada PUT incrementa version y un PUT con version
         # vieja se ignora en silencio (playbook §2.7).
         fresco = cli.request("GET", f"/workflow/{LOC}/{wid}")
+        # ⛔ workflowData VA SIEMPRE. Omitirlo NO es "no tocar los nodos": el PUT
+        # resetea a default todo campo raíz omitido (playbook §2.1) y deja el
+        # workflow SIN NODOS. Esto vació 13 workflows el 25-ago-2026 y hubo que
+        # recuperarlos del historial (scripts/restaurar_workflows_vaciados.py).
+        nodos = steps if toco_nodos else (fresco.get("workflowData") or {}).get("templates") or []
+        if not nodos and (d.get("workflowData") or {}).get("templates"):
+            print("       ⛔ ABORTADO: el re-GET vino sin nodos y el PUT los borraría")
+            continue
         body = {
             "name": fresco.get("name"),
             "version": fresco.get("version"),
             "parentId": fresco.get("parentId"),
             "status": fresco.get("status"),        # se preserva: no publicamos por API
             "allowMultiple": True if quiere_reingreso else fresco.get("allowMultiple", False),
+            "workflowData": {"templates": nodos},
         }
-        if toco_nodos:
-            body["workflowData"] = {"templates": steps}
         r = cli.request("PUT", f"/workflow/{LOC}/{wid}", body)
         ok = r and not (isinstance(r, dict) and r.get("_error"))
         print(f"       {'✅ escrito' if ok else '❌ FALLÓ: ' + str(r)[:90]}")

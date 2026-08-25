@@ -227,3 +227,24 @@ Dos moldes más que costaron un fallo silencioso cada uno. Ambos ya están en
 - **Confirmado en vivo el §2.1:** en esta subcuenta los 15 workflows construidos por API
   tenían `allowMultiple` en OFF y los 5 importados por UI en ON. El PUT sin ese campo lo
   apaga, y nadie se entera hasta que un cliente que vuelve es saltado en silencio.
+
+### 9.1 · El PUT sin `workflowData` VACÍA el workflow (25-ago-2026, incidente real)
+
+La regla §2.1 ("el PUT resetea a default todo campo raíz omitido") **se aplica también a
+`workflowData`**, y ese es el caso más destructivo de todos. Un script que solo quería
+encender `allowMultiple` mandó el PUT sin `workflowData` pensando que "si no lo mando, no
+lo toco". **Vació 13 workflows de golpe**, incluidos los 3 puentes del bot y SP04.
+
+- **Regla:** en un PUT de workflow o mandas TODOS los campos raíz o pierdes los que omitas.
+  Usa `put_workflow()` del toolkit, que relee y los preserva. Si escribes el PUT a mano,
+  `workflowData` va SIEMPRE, aunque no cambies un solo nodo.
+- **Guarda barata:** antes de un PUT, si el body no lleva nodos y el workflow SÍ los tenía,
+  aborta.
+- **Se recupera:** `GET /workflow/{loc}/{wid}/history` devuelve las versiones anteriores,
+  cada una con un `fileUrl` a un snapshot JSON en Firebase Storage que contiene los
+  `templates` completos. Se busca la versión más reciente con nodos y se reescribe.
+  Script: `scripts/restaurar_workflows_vaciados.py`. El historial salvó el proyecto —
+  pero no es excusa: el daño fue silencioso (la API devuelve 200) y solo se detectó al
+  auditar la anatomía completa por otro motivo.
+- **Corolario:** después de CUALQUIER tanda de PUTs, contar los nodos de cada workflow
+  tocado. "200 OK" no significa que siga estando lo que había.
