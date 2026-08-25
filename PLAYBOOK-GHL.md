@@ -268,3 +268,18 @@ recientes, así que un diff contra "el último snapshot" puede estar comparando 
 ediciones atrás y atribuir cambios a quien no los hizo. Para saber qué pasó de verdad,
 **compara los IDs de los nodos**: un id que sobrevive es el mismo nodo, y un tipo distinto
 con el mismo id es una conversión en su sitio, no un borrado más un alta.
+
+### 9.3 · Un 403 de la API pública NO significa "token caducado"
+
+`services.leadconnectorhq.com` está detrás de Cloudflare, que rechaza con
+**403 "Error 1010: Access denied"** cualquier petición sin `User-Agent` de navegador,
+**antes** de que GHL mire el token. El síntoma engaña: parece un PIT revocado y se pierde
+el tiempo pidiendo uno nuevo.
+
+- **Distinguirlos:** si el cuerpo del 403 menciona `cloudflare` o `1010`, es el bloqueo —
+  el token ni se ha evaluado. Un problema real de credenciales da **401** con mensaje de
+  GHL (`"This location is not accessible from this token!"`, `"Invalid JWT"`...).
+- **Arreglo:** mandar `User-Agent` de Chrome también en el cliente público (el interno ya
+  lo hacía, por eso uno funcionaba y el otro no). Ya está en `ghl_client.py`.
+- **Corolario:** cuando dos clientes contra el mismo host se comportan distinto, compara
+  sus cabeceras antes de culpar a las credenciales.

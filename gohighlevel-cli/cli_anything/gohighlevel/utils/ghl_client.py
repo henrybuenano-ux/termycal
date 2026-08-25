@@ -56,6 +56,19 @@ def _get_location_id() -> str:
     return os.environ.get("GHL_LOCATION_ID", "YB8rMdFShcHGcZGW87mA").strip()
 
 
+# Cloudflare protege services.leadconnectorhq.com y rechaza con un 403
+# "Error 1010: Access denied" cualquier petición sin User-Agent de navegador —
+# ANTES de que GHL llegue a mirar el token. El síntoma engaña: parece un PIT
+# caducado o revocado cuando en realidad la petición nunca llegó a autenticarse.
+# El cliente interno ya mandaba UA de Chrome y por eso funcionaba; este no.
+# (Diagnosticado en TÉRMYCAL, 25-ago-2026: con UA, el mismo token pasa de 403 de
+# Cloudflare a un 401 legítimo de GHL, que es un error muy distinto.)
+CHROME_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+)
+
+
 def _headers(version: str | None = None, path: str = "") -> dict[str, str]:
     """Build request headers with auth and auto-resolved version."""
     return {
@@ -63,6 +76,7 @@ def _headers(version: str | None = None, path: str = "") -> dict[str, str]:
         "Content-Type": "application/json",
         "Accept": "application/json",
         "Version": version or _version_for_path(path),
+        "User-Agent": CHROME_UA,
     }
 
 
