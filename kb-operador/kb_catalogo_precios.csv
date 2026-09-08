@@ -110,9 +110,9 @@ Extra,Goma butano,10 €,Material auxiliar de instalación
 Extra,Regulador de gas,15 €,Material auxiliar de instalación
 Extra,Embellecedor,2 €,Material auxiliar de instalación
 Extra,Toma de análisis de combustión,15 €,Material auxiliar de instalación
-Paquete orientativo,Calentador estanco 11L instalado,≈ 478 € + IVA,Aparato + instalación básica; extras aparte
-Paquete orientativo,Calentador estanco 16L instalado,≈ 578 € + IVA,Aparato + instalación básica; extras aparte
-Paquete orientativo,Calentador atmosférico 11L instalado,≈ 356 € + IVA,Aparato + instalación básica; extras aparte
+Paquete (USO INTERNO),Calentador estanco 11L instalado,≈ 478 € + IVA,⛔ NO lo puede citar el bot: incluye instalación. Solo para las proformas de Alejandro. Aparato + instalación básica; extras aparte
+Paquete (USO INTERNO),Calentador estanco 16L instalado,≈ 578 € + IVA,⛔ NO lo puede citar el bot: incluye instalación. Solo para las proformas de Alejandro. Aparato + instalación básica; extras aparte
+Paquete (USO INTERNO),Calentador atmosférico 11L instalado,≈ 356 € + IVA,⛔ NO lo puede citar el bot: incluye instalación. Solo para las proformas de Alejandro. Aparato + instalación básica; extras aparte
 Regla,Todos los precios son SIN IVA,—,Comunicar siempre como '+ IVA'. Proforma: Base + IVA 21% + Total
 Regla,Modelo de precio,—,"Aparato + instalación básica + extras necesarios, todo + IVA"
 Regla,Productos en el CRM,—,Los 22 items de esta familia existen como Products en la subcuenta para la lista de productos de la proforma manual (flujo A). Cambio de precio = actualizar KB del bot + Products.
@@ -123,3 +123,11 @@ Extra,Cronotermostato digital,75 €,Caldera · precio sin IVA
 Regla,Modelo de precio por familia,—,"Calentadores de gas y termos eléctricos: aparato + instalación + extras (partidas separadas). Calderas: el precio YA INCLUYE instalación básica, solo se suman extras. El bot NO debe sumar instalación en calderas."
 Aviso,Dato sospechoso en termos,—,"Provai Andros Duo 100L figura a 135,85 €, más barato que su propio 50L (207,34 €) y 80L (216,50 €). El modelo WiFi sí sube de forma coherente (225,55 / 257,22 / 278,32). Casi seguro errata: CONFIRMAR con el cliente antes de usarlo."
 Pendiente,Familias que faltan del catálogo,—,"Solo queda pendiente el precio de instalación de termos eléctricos. Aerotermia: siempre bajo presupuesto, nunca se cataloga."
+Regla,El bot solo da precio de APARATO,—,"Decisión del cliente (reunión 26-ago). Frase literal: «Le puedo dar precio del calentador, pero de la instalación tendría que verla primero». EXCEPCIÓN calderas: el precio ya incluye instalación básica, se dice «desde 1.400 € con instalación básica incluida»."
+Regla,Las DOS visitas no son lo mismo,—,"Presupuestar una sustitución o instalación nueva = visita GRATUITA. Diagnosticar una avería para repararla = 45 € + IVA, descontables de la factura si acepta. No confundirlas: anunciar 45 € a quien solo quiere precio de un aparato nuevo espanta al cliente."
+Regla,Calentadores de gas: interior/exterior + toma de luz,—,"INTERIOR → solo estanco (obligatorio por normativa desde 2018). EXTERIOR → caben los dos, y decide si hay toma de luz cerca: sin toma, solo atmosférico (va a pilas). Nunca recomendar atmosférico para interior."
+Regla,Termos: dimensionado y dureza del agua,—,"Si no sabe los litros, preguntar cuántas personas viven en el domicilio (3 personas ≈ 100 L). En zonas de Granada con agua calcárea, recomendar resistencia envainada."
+Regla,Fotos que se piden,—,"La chimenea, las tomas inferiores y el aparato. Con eso Alejandro decide si la instalación es básica o lleva extras."
+Servicio,Corrección de anomalías de gas,Según anomalía,"Línea de servicio detectada el 2-sep en las conversaciones reales. La inspección deja un documento al cliente; TÉRMYCAL corrige, lo comunica a la compañía y manda resguardo por email. Hay que pedir el documento para presupuestar. ⛔ SIN TARIFAS EN EL CATÁLOGO — pedirlas al cliente."
+Servicio,Tienda física — Avda. Don Bosco 38 (Zaidín),—,"Se puede ir a ver aparatos y a tratar la financiación, CON CITA PREVIA. Detectado el 2-sep; no estaba documentado."
+Aviso,Marca Ferroli sin catálogo,—,"Alejandro dice a sus clientes que actualmente monta Ariston, Baxi y Ferroli. El .ods de calderas solo trae Ariston, Baxi y Bosch. Pedirle los precios de Ferroli o confirmar si ya no la monta."

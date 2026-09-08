@@ -73,8 +73,14 @@ reconstruyen; el token hay que pedírselo al usuario.
 | Email | termycalgranada@gmail.com |
 | IBAN | ES30 2100 0944 6202 0021 8036 |
 | Zona | Granada capital + 20 km · 100% B2C |
+| Tienda física | **Avda. Don Bosco 38, el Zaidín — con CITA PREVIA** (se puede ir a ver aparatos y a tratar la financiación) |
 | Particularidad | Colabora con Leroy Merlin (agenda propia NO integrable) |
 | Problema raíz | Madruga para facturas en Excel; pierde leads por no atender WhatsApp mientras instala |
+
+**Líneas de servicio:** termos eléctricos · calentadores de gas · calderas · aerotermia (siempre
+bajo presupuesto) · **corrección de anomalías de gas** (la inspección deja un documento al
+cliente; TÉRMYCAL corrige, lo comunica a la compañía y manda resguardo por email — el precio
+depende de la anomalía, hay que pedir el documento).
 
 **Dominios** (todos en Piensa Solutions): `termosycalentadoresgranada.com` (el principal,
 WordPress vivo, DNS migrado 10/7 a ns5/ns6.piensasolutions.com · rollback:
@@ -142,9 +148,21 @@ Cerrado
    segunda agenda de Leroy Merlin. Visitas en rangos de 2 h; instalaciones bloquean
    mañana/día. Recordatorios 1 día + 2 h antes.
 6. **IVA: precios "+ IVA".** La proforma muestra Base + IVA 21% + Total.
-7. **Firma digital: SÍ.** El bot pide **fotos** del aparato y su ubicación.
+7. **Firma digital: SÍ.** El bot pide **fotos** — concretas: la chimenea, las tomas inferiores
+   y el aparato.
 8. **Aerotermia: NUNCA se estima** (2.000-3.000 €+). Solo termos eléctricos, calentadores
    de gas y calderas.
+8b. **El bot SOLO da precio de APARATO, nunca de instalación** *(decisión del cliente, reunión
+   26-ago; frase literal suya: "Le puedo dar precio del calentador, pero de la instalación
+   tendría que verla primero")*. **Excepción calderas:** ahí el precio ya incluye la
+   instalación básica → "desde 1.400 € con instalación básica incluida" + fotos para ver extras.
+8c. **Las DOS visitas no son lo mismo** *(hallazgo 2-sep en las conversaciones reales)*:
+   presupuestar una sustitución = **visita GRATUITA** · diagnosticar una avería = **45 € + IVA**
+   descontables. Confundirlas espanta clientes que solo querían un precio.
+8d. **Calentadores de gas — árbol de normativa** *(hallazgo 2-sep)*: la PRIMERA pregunta es
+   interior o exterior. **Interior → solo estanco** (obligatorio desde 2018). **Exterior →**
+   caben los dos, y decide una segunda pregunta: **¿hay toma de luz cerca?** Sin toma, solo
+   atmosférico (va a pilas). ⛔ Nunca un atmosférico en interior: está prohibido.
 9. **Reseñas: sistema RBD** (snapshot importado 14/7). Encuesta 1-5 → 1-3 form privado +
    aviso interno · 4-5 → Google.
 10. **Diagnóstico 45 €+IVA**, descontable si repara/sustituye en 1 mes.
@@ -156,21 +174,28 @@ Cerrado
 
 ## 7. Catálogo de precios
 
-Fuente de verdad: **`kb-operador/kb_catalogo_precios.csv`** (124 filas).
+Fuente de verdad: **`kb-operador/kb_catalogo_precios.csv`** (132 filas).
+Tono y flujos del bot: **`kb-operador/conversaciones_reales_alejandro.md`** — cinco
+conversaciones suyas transcritas, mandan sobre cualquier redacción nuestra.
 
 | Familia | Estado |
 |---|---|
-| Calentadores de gas | ✅ 22 refs · aparato + instalación + extras, todo SIN IVA |
-| Termos eléctricos | ✅ 79 refs (26 modelos, 6 marcas, 15-200 L) · SIN IVA · ⛔ **falta el precio de instalación** |
+| Calentadores de gas | ✅ 22 refs · SIN IVA |
+| Termos eléctricos | ✅ 79 refs (26 modelos, 6 marcas, 15-200 L) · SIN IVA |
 | Calderas de condensación | 🟡 10 refs **BLOQUEADAS** · el .ods dice "IVA incluido" y el PDF de extras "sin IVA" — sin confirmar |
 | Aerotermia | Nunca se cataloga: siempre bajo presupuesto |
+| Anomalías de gas | ⛔ Sin tarifas: el precio depende de la anomalía, hay que pedir el documento |
 
 **El modelo de precio cambia por familia:** calentadores y termos = aparato + instalación +
-extras por separado. **Calderas = el precio YA incluye instalación básica**, solo se suman
-extras. Hay que decírselo al bot en la KB o inflará los estimados.
+extras por separado (y el bot **solo cita el aparato**). **Calderas = el precio YA incluye
+instalación básica**, solo se suman extras.
 
-**Dato sospechoso pendiente:** PROVAI Andros Duo 100 L (135,85 €) sale más barato que su
-propio 50 L y 80 L. Probable errata.
+⚠️ El precio de instalación de termos **ya no bloquea al bot** (no lo va a cotizar), pero sigue
+haciendo falta para las proformas de Alejandro.
+
+**Datos sospechosos pendientes:** PROVAI Andros Duo 100 L (135,85 €) sale más barato que su
+propio 50 L y 80 L — probable errata. Y Alejandro dice a sus clientes que monta **Ferroli**,
+marca que no aparece en el catálogo que nos pasó.
 
 **Regla de mantenimiento:** cambio de precio = actualizar KB del bot **y** Products (2 sitios).
 
@@ -197,22 +222,36 @@ propio 50 L y 80 L. Probable errata.
 
 ---
 
-## 10. Estado y pendientes (25-ago-2026)
+## 10. Estado y pendientes (2-sep-2026)
 
-**Bloqueos externos:** WABA (S02) · templates Meta (S03, ya son 9-10) · usuario de Alejandro
-en el CRM (destinatario de TODOS los avisos internos) · ficha de Google (GBP).
+**✅ WhatsApp CONECTADO** — el número real del negocio (644 962 421), WABA aprobada. Los
+mensajes que responden dentro de la ventana de 24 h ya salen por WhatsApp; los que abren
+conversación siguen esperando plantillas de Meta.
 
-**Del cliente:** precio de instalación de termos · confirmar IVA de calderas · confirmar el
-Andros Duo 100 L · fotos de trabajos para la web.
+**✅ Usuarios en el CRM:** Alejandro `oHzoJLAxYzRzgAqudYwc` (admin) · Oliver
+`8QrIxCm1EIlYSPKDyEJy` (admin). ⚠️ LS01, LS02 y RBD 05 asignan a **Oliver** — correcto para
+pruebas, hay que cambiarlo a Alejandro antes del go-live.
 
-**Deuda técnica detectada en la auditoría del 25-ago** (script:
-`gohighlevel-cli/scripts/reparar_reingreso_y_notificaciones.py`):
-1. **Reingreso apagado en los 15 workflows construidos por API.** Con `allowMultiple` en
-   OFF el contacto entra UNA VEZ EN SU VIDA: el cliente que vuelve a pedir presupuesto meses
-   después es saltado en silencio. Los RBD (importados por UI) sí lo tienen ON — confirma que
-   la causa es el PUT que resetea campos omitidos.
-2. **BOT-DH y SP03 tienen la notificación con forma inventada** (`userType: "all"`, clave
-   `subject`, sin anidar). Se guardan, se ven bien y **no avisan a nadie**. El molde válido
-   está en SP-N y en los RBD.
-3. Los **BOT-FU están publicados con los SMS placeholder dentro** — hoy fallan en silencio
-   (no hay número); el día que se conecte WhatsApp mandarían lo que no toca.
+**Bloqueos externos:** templates Meta (S03) · ficha de Google (GBP).
+
+**Del cliente:** confirmar IVA de calderas · confirmar el Andros Duo 100 L · precios de
+**Ferroli** · tarifas de **anomalías de gas** · precio de instalación de termos (ya solo para
+las proformas, no bloquea al bot) · fotos de trabajos para la web.
+
+**Pendiente de secuencia — hacer JUNTO al go-live, no antes:** pasar las 9 notificaciones de
+`userType: "assign"`/`contact_owner` a `userType: "user"` + el id de Alejandro, y cambiar el
+`assign_user` de LS01/LS02/RBD 05 a él. Si se hace ahora, empieza a recibir avisos de
+contactos de prueba.
+
+**Estado del bot (tras la demo del 26-ago, que salió floja):** el prompt está reescrito en la
+v2 con los flujos reales de Alejandro. Falta pegarlo en la UI, ajustar la KB (los paquetes con
+instalación ya no los puede citar) y repetir la demo.
+
+**Deuda técnica ya RESUELTA** (auditoría del 25-ago, scripts en `gohighlevel-cli/scripts/`):
+reingreso encendido en los 20 workflows · notificaciones de BOT-DH y SP03 con forma válida ·
+`add_notes` con la clave `html`. Ver PLAYBOOK §9 para el detalle y el incidente del PUT que
+vació 13 workflows.
+
+⚠️ **Sigue vigente:** los BOT-FU y SP03/SP04/SP06/AP01/AP02 están publicados con **SMS
+placeholder** dentro. Hoy no se entregan; el día que Meta apruebe las plantillas hay que
+cambiarlos (`scripts/migrar_sms_a_whatsapp.py` ya lo hace, solo falta el `template_id`).
