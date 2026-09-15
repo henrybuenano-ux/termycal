@@ -283,3 +283,28 @@ el tiempo pidiendo uno nuevo.
   lo hacía, por eso uno funcionaba y el otro no). Ya está en `ghl_client.py`.
 - **Corolario:** cuando dos clientes contra el mismo host se comportan distinto, compara
   sus cabeceras antes de culpar a las credenciales.
+
+### 9.4 · Tras un PUT, el GET puede devolver el workflow VACÍO de forma transitoria
+
+Verificando justo después de una tanda de PUTs, un `GET /workflow/{loc}/{wid}` devolvió
+`workflowData.templates` vacío para un workflow que estaba perfectamente (12 nodos al
+releerlo segundos después). Es un retardo de consistencia de lectura, no pérdida de datos.
+
+- **Cómo no confundirlo con el desastre de §9.1:** reintenta el GET 2-3 veces con pausa
+  antes de dar un workflow por vacío. Lo de §9.1 era permanente y se veía en lecturas
+  sucesivas; esto se cura solo en segundos.
+- **Consecuencia práctica:** un verificador ingenuo puede disparar una "restauración" que
+  no hace falta, o hacerte creer que rompiste algo. Mete el reintento en el verificador.
+
+### 9.5 · Los ids de usuario viven en más sitios de los que parece
+
+Al sustituir un usuario que deja la cuenta no basta con `assign_user` y las
+notificaciones. En TÉRMYCAL (15-sep) el id del usuario saliente seguía además en:
+
+- `proposals_estimates_send_document` → clave **`userId`**: es el REMITENTE del documento.
+  Con el usuario borrado, el envío de la proforma — la acción más crítica del sistema —
+  habría fallado sin avisar.
+
+**Regla:** cuando alguien deja una subcuenta, busca su id en el JSON COMPLETO de todos los
+workflows (`json.dumps(templates)`), no solo en los nodos que esperas. Y comprueba antes
+quién sigue existiendo: `GET /users/?locationId=...` en la API pública.
