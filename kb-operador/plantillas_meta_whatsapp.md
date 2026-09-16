@@ -19,8 +19,12 @@
 **Dónde:** BOT-FU · Inactividad 3 días · nodo 0 · **144 caracteres**
 
 ```
-Hola {{1}}, soy Alejandro de TÉRMYCAL. Quedamos a medias con lo de tu aparato — ¿lo retomamos? Respóndeme por aquí y seguimos 👍
+Hola {{1}}, soy Sofía de TÉRMYCAL. Quedamos a medias con lo de su aparato — ¿lo retomamos? Respóndame por aquí y seguimos 👍
 ```
+⚠️ *Cambiado el 16-sep: decía "soy Alejandro". Como el bot es Sofía, un mensaje firmado por
+Alejandro tras una conversación con ella chirría. Las otras nueve plantillas no tienen este
+problema: o son neutras, o hablan de cosas que hace Alejandro de verdad (el "en un rato estoy
+contigo" del recordatorio es él, que es quien va).*
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
