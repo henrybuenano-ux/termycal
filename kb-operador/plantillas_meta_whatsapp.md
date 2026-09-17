@@ -1,8 +1,8 @@
 # Plantillas de WhatsApp para crear en Meta — TÉRMYCAL
 
 > Generado el 15-sep-2026 a partir de los 10 nodos SMS pendientes, leídos por API.
-> **Son 10 plantillas.** Todas de categoría **Utility** (son transaccionales, no marketing)
-> e idioma **Español (ES)**.
+> **Son 10 plantillas.** Todas de categoría **Utility** (son transaccionales, no marketing),
+> idioma **Español (ES)** y **tratando de usted**, como escribe Alejandro a sus clientes.
 
 ## Reglas de Meta que hay que respetar
 
@@ -19,16 +19,16 @@
 **Dónde:** BOT-FU · Inactividad 3 días · nodo 0 · **144 caracteres**
 
 ```
-Hola {{1}}, soy Sofía de TÉRMYCAL. Quedamos a medias con lo de su aparato — ¿lo retomamos? Respóndame por aquí y seguimos 👍
+Hola {{1}}, soy Lucía de TÉRMYCAL. Quedamos a medias con lo de su aparato — ¿lo retomamos? Respóndame por aquí y seguimos 👍
 ```
-⚠️ *Cambiado el 16-sep: decía "soy Alejandro". Como el bot es Sofía, un mensaje firmado por
-Alejandro tras una conversación con ella chirría. Las otras nueve plantillas no tienen este
+⚠️ *Cambiado el 17-sep: decía "soy Alejandro". La asistente se llama **Lucía** (nombre elegido
+por el cliente), y un mensaje firmado por Alejandro tras una conversación con ella chirría. Las otras nueve plantillas no tienen este
 problema: o son neutras, o hablan de cosas que hace Alejandro de verdad (el "en un rato estoy
-contigo" del recordatorio es él, que es quien va).*
+con usted" del recordatorio es él, que es quien va).*
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 
 ---
 
@@ -36,12 +36,12 @@ contigo" del recordatorio es él, que es quien va).*
 **Dónde:** BOT-FU · Inactividad 5 días · nodo 0 · **154 caracteres**
 
 ```
-Hola {{1}}, no quiero ser pesado 😊 Dejo el tema aparcado. Cuando quieras retomar tu presupuesto, escríbeme por aquí y lo vemos. ¡Gracias!
+Hola {{1}}, no quiero ser pesado 😊 Dejo el tema aparcado. Cuando quiera retomar su presupuesto, escríbame por aquí y lo vemos. ¡Gracias!
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 
 ---
 
@@ -50,12 +50,12 @@ Hola {{1}}, no quiero ser pesado 😊 Dejo el tema aparcado. Cuando quieras reto
 *(corregido: le faltaban las tildes en "avísame por aquí")*
 
 ```
-Confirmado, {{1}}! Nos vemos el {{2}} en la franja de {{3}} a {{4}}. Cualquier cambio, avísame por aquí.
+Confirmado, {{1}}! Nos vemos el {{2}} en la franja de {{3}} a {{4}}. Cualquier cambio, avíseme por aquí.
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 | {{2}} | `{{appointment.only_start_date}}` | 22/09/2026 |
 | {{3}} | `{{appointment.only_start_time}}` | 10:00 |
 | {{4}} | `{{appointment.only_end_time}}` | 12:00 |
@@ -66,12 +66,12 @@ Confirmado, {{1}}! Nos vemos el {{2}} en la franja de {{3}} a {{4}}. Cualquier c
 **Dónde:** SP03 · nodo 3 · **182 caracteres**
 
 ```
-Hola {{1}}, te recuerdo tu cita de mañana {{2}} en la franja de {{3}} a {{4}}. ¡Nos vemos!
+Hola {{1}}, le recuerdo su cita de mañana {{2}} en la franja de {{3}} a {{4}}. ¡Nos vemos!
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 | {{2}} | `{{appointment.only_start_date}}` | 22/09/2026 |
 | {{3}} | `{{appointment.only_start_time}}` | 10:00 |
 | {{4}} | `{{appointment.only_end_time}}` | 12:00 |
@@ -83,12 +83,12 @@ Hola {{1}}, te recuerdo tu cita de mañana {{2}} en la franja de {{3}} a {{4}}. 
 ⚠️ *El texto original empezaba con la variable — Meta lo rechaza. Se le añadió "Hola".*
 
 ```
-Hola {{1}}, en un rato estoy contigo — franja de {{2}} a {{3}}. ¡Hasta ahora!
+Hola {{1}}, en un rato estoy con usted — franja de {{2}} a {{3}}. ¡Hasta ahora!
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 | {{2}} | `{{appointment.only_start_time}}` | 10:00 |
 | {{3}} | `{{appointment.only_end_time}}` | 12:00 |
 
@@ -99,13 +99,13 @@ Hola {{1}}, en un rato estoy contigo — franja de {{2}} a {{3}}. ¡Hasta ahora!
 ⚠️ *Empezaba con la variable — corregido con "Hola".*
 
 ```
-Hola {{1}}, te acabo de enviar el presupuesto a tu correo ({{2}}). Cualquier duda me escribes por aquí 👍
+Hola {{1}}, le acabo de enviar el presupuesto a su correo ({{2}}). Cualquier duda me escribe por aquí 👍
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
-| {{2}} | `{{contact.email}}` | lucia@ejemplo.com |
+| {{1}} | `{{contact.first_name}}` | Carmen |
+| {{2}} | `{{contact.email}}` | carmen@ejemplo.com |
 
 ---
 
@@ -113,12 +113,12 @@ Hola {{1}}, te acabo de enviar el presupuesto a tu correo ({{2}}). Cualquier dud
 **Dónde:** SP06 · nodo 4 · **117 caracteres**
 
 ```
-Hola {{1}}, ¿pudiste ver el presupuesto que te envié? Si tienes cualquier duda me dices y lo vemos 👍
+Hola {{1}}, ¿pudo ver el presupuesto que le envié? Si tiene cualquier duda me dice y lo vemos 👍
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 
 ---
 
@@ -126,12 +126,12 @@ Hola {{1}}, ¿pudiste ver el presupuesto que te envié? Si tienes cualquier duda
 **Dónde:** SP06 · nodo 9 · **154 caracteres**
 
 ```
-Hola {{1}}, te escribo por última vez por lo del presupuesto — sigue en pie, y si hay que ajustar algo lo vemos sin compromiso. ¡Gracias!
+Hola {{1}}, le escribo por última vez por lo del presupuesto — sigue en pie, y si hay que ajustar algo lo vemos sin compromiso. ¡Gracias!
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 
 ---
 
@@ -142,12 +142,12 @@ quitarlas. Y usaba `{{fecha}}` y `{{rango}}`, que **no son merge fields válidos
 mapearlos a los de la cita.*
 
 ```
-¡Genial, {{1}}! Queda confirmado tu trabajo. Te esperamos el {{2}} en la franja {{3}}. Nos vemos 🔧
+¡Genial, {{1}}! Queda confirmado su trabajo. Le esperamos el {{2}} en la franja {{3}}. Nos vemos 🔧
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 | {{2}} | `{{appointment.only_start_date}}` | 22/09/2026 |
 | {{3}} | `{{appointment.only_start_time}}` a `{{appointment.only_end_time}}` | 10:00 a 12:00 |
 
@@ -158,12 +158,12 @@ mapearlos a los de la cita.*
 ⚠️ *Era la peor: **empezaba Y terminaba** con variable. Meta la rechaza seguro.*
 
 ```
-Hola {{1}}, ¡gracias por confiar en TÉRMYCAL! ¿Me ayudas valorando el servicio? Es un momento: {{2}} ¡Muchas gracias!
+Hola {{1}}, ¡gracias por confiar en TÉRMYCAL! ¿Me ayuda valorando el servicio? Es un momento: {{2}} ¡Muchas gracias!
 ```
 
 | Var | Mapea a | Ejemplo |
 |---|---|---|
-| {{1}} | `{{contact.first_name}}` | Lucía |
+| {{1}} | `{{contact.first_name}}` | Carmen |
 | {{2}} | `{{trigger_link.4YvqZfoC3PHxVYlg0h5F}}` | https://link.termycal.com/abc123 |
 
 **Alternativa recomendada:** en vez de meter el enlace en el cuerpo, crear la plantilla con
